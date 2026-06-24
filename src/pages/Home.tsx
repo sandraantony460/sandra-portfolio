@@ -8,21 +8,20 @@ export default function Home() {
 
       <section className="mb-10">
         <p className="text-slate-700 leading-relaxed mb-4">
-          I design and scale learning programmes that are measurable, technology-driven, and built for real performance outcomes.
-          With 9+ years across technical and enterprise environments, I specialise in end-to-end curriculum design,
-          certification governance, AI-powered course production, and using data to continuously improve learning at scale.
+          I design and scale learning programmes across technical and enterprise environments.
+          My focus is on measurable outcomes: completion rates, certification numbers, production efficiency,
+          and using LMS data to make content decisions rather than guesses.
         </p>
         <p className="text-slate-700 leading-relaxed">
           Currently nominated as Head of Technical Publications and Training, I manage an LMS platform
-          serving <strong>902 active users</strong>, <strong>40+ courses</strong>, and <strong>3,100+ course assignments</strong> —
-          using platform data and completion metrics to drive programme decisions and report impact to senior leadership.
+          with <strong>902 active users</strong>, <strong>40+ courses</strong>, and <strong>3,100+ course assignments</strong>.
         </p>
       </section>
 
       <section className="mb-10">
         <div className="grid gap-4 sm:grid-cols-3">
           {[
-            { stat: '9+', label: 'Years in instructional design & learning technology' },
+            { stat: '9+', label: 'Years in instructional design and learning technology' },
             { stat: '902', label: 'Active LMS users managed' },
             { stat: '75+', label: 'Professionals certified globally' },
           ].map(({ stat, label }) => (
@@ -35,14 +34,14 @@ export default function Home() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Bring</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Do</h2>
         <ul className="space-y-2 text-slate-700">
           {[
-            'End-to-end curriculum design — from needs analysis and content strategy to LMS deployment and outcome measurement',
-            'Certification programme governance — 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA',
-            'AI-powered production workflows — Synthesia, Claude, Amazon Polly; ~50% increase in video output',
-            'Data-driven improvement — completion rates lifted from 50–60% to 75–80% through evidence-based redesign',
-            'Cross-functional collaboration — R&D, PS, UX, senior leadership, academic partners across the US and EU',
+            'End-to-end curriculum design: needs analysis, content strategy, LMS deployment, outcome measurement',
+            'Certification programme governance: 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA',
+            'AI-powered production workflows using Synthesia, Claude, and Amazon Polly',
+            'Data-driven improvement: completion rates lifted from 50-60% to 75-80% through evidence-based redesign',
+            'Cross-functional collaboration with R&D, PS, UX, senior leadership, and academic partners',
           ].map((item) => (
             <li key={item} className="flex gap-3">
               <span className="text-indigo-400 mt-1 shrink-0">→</span>
@@ -53,10 +52,29 @@ export default function Home() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">Tools & Technology</h2>
+        <div className="space-y-3">
+          {[
+            { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
+            { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
+            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
+            { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace' },
+            { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
+            { category: 'Programming', tools: 'Python, SQL, HTML' },
+          ].map(({ category, tools }) => (
+            <div key={category} className="flex gap-4">
+              <span className="w-48 shrink-0 text-sm font-medium text-slate-500">{category}</span>
+              <span className="text-sm text-slate-700">{tools}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Education</h2>
         <div className="space-y-2 text-slate-700">
-          <p><strong>MSc Business Intelligence & Programme Management</strong> — University College Cork <span className="text-slate-400">(2:1)</span></p>
-          <p><strong>BEng Computer Science</strong> — Cochin University of Science and Technology <span className="text-slate-400">(1:1)</span></p>
+          <p><strong>MSc Business Intelligence & Programme Management</strong> — University College Cork (2:1)</p>
+          <p><strong>BEng Computer Science</strong> — Cochin University of Science and Technology (1:1)</p>
         </div>
       </section>
 
@@ -64,10 +82,10 @@ export default function Home() {
         <h2 className="text-xl font-semibold text-slate-800 mb-4">Portfolio</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            { href: '/certification', title: 'Certification Programme', desc: 'Two-tier technical certification — 75→80% completion, 75+ certified globally' },
-            { href: '/synthesia', title: 'Synthesia Transformation', desc: 'AI video pipeline — 50% capacity increase, 6 languages, 7+ videos/year' },
-            { href: '/ai-prototype', title: 'AI-Embedded Learning', desc: 'Interactive prototype surfacing 25 existing videos at point of need' },
-            { href: '/sample-video', title: 'Sample Instructional Video', desc: 'Self-produced end-to-end: script, screen recording, Synthesia narration' },
+            { href: '/certification', title: 'Certification Programme', desc: 'Two-tier technical certification. Completion up from 50-60% to 75-80%. 75+ certified globally.' },
+            { href: '/synthesia', title: 'Synthesia Transformation', desc: 'AI video pipeline. 50% capacity increase, 6 languages, 7+ videos per year.' },
+            { href: '/ai-prototype', title: 'AI-Embedded Learning', desc: 'Prototype surfacing 25 BDL videos inside the AI doc assistant at point of need.' },
+            { href: '/sample-video', title: 'Sample Instructional Video', desc: 'Self-produced: script, screen recording, Synthesia narration.' },
           ].map(({ href, title, desc }) => (
             <a
               key={href}
@@ -77,25 +95,6 @@ export default function Home() {
               <h3 className="font-semibold text-slate-900 mb-1">{title}</h3>
               <p className="text-sm text-slate-500">{desc}</p>
             </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-4">Tools & Technology</h2>
-        <div className="space-y-3">
-          {[
-            { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
-            { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
-            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
-            { category: 'Documentation & Collaboration', tools: 'Confluence, SharePoint, Adobe FrameMaker, Advanced MS Office, Google Workspace' },
-            { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
-            { category: 'Programming', tools: 'Python, SQL, HTML' },
-          ].map(({ category, tools }) => (
-            <div key={category} className="flex gap-4">
-              <span className="w-52 shrink-0 text-sm font-medium text-slate-500">{category}</span>
-              <span className="text-sm text-slate-700">{tools}</span>
-            </div>
           ))}
         </div>
       </section>

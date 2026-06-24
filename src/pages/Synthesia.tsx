@@ -3,48 +3,44 @@ export default function Synthesia() {
     <main className="max-w-3xl mx-auto px-6 py-16">
       <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 2</p>
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Synthesia-Based Video Production Transformation</h1>
-      <p className="text-slate-500 text-sm mb-8">AI Video Production · Workflow Design · Change Management · Localisation</p>
+      <p className="text-slate-500 text-sm mb-8">AI Video Production · Workflow Design · Localisation</p>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">The Challenge</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-3">The Problem</h2>
         <p className="text-slate-700 leading-relaxed mb-3">
-          Four Js develops technically complex, extensively documented products — GBC, BDL, and others — with
-          quarterly release cycles. With a small team and a vast content surface, keeping training materials
-          current was a constant battle. Every release meant potential re-recording, and conventional production
-          tools simply couldn't keep pace.
+          Four Js has technically complex products with extensive documentation and quarterly release cycles.
+          With a small team and a large content surface, keeping training current was a constant problem.
+          Every release risked making existing videos outdated, and re-recording from scratch was the only option.
         </p>
         <p className="text-slate-700 leading-relaxed">
-          When I joined, the video process relied on manual voiceover recording, separate editing tools, and
-          inconsistent file storage. The team could only produce 2–3 major training videos per year — and any
-          update meant starting from scratch.
+          When I joined, the team produced 2-3 major training videos per year using manual voiceover recording
+          and separate editing tools. Updates were slow, storage was inconsistent, and there was no scalable path forward.
         </p>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">My Approach</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Did</h2>
         <p className="text-slate-700 leading-relaxed mb-4">
-          The constraint was clear: a small team, a large and fast-moving product suite, and no room for
-          slow conventional production cycles. Rather than hiring more resource, I looked at where AI could
-          absorb the repetitive, time-intensive parts of production — freeing the team to focus on design
-          quality and content accuracy. The tool selection evolved deliberately, starting with voice generation
-          and building toward a fully integrated AI-first pipeline.
+          The constraint was a small team against a large, fast-moving product suite. Rather than hiring,
+          I looked at where AI could take over the repetitive parts of production. The approach evolved
+          deliberately rather than jumping straight to a full platform switch.
         </p>
         <ul className="space-y-3 text-slate-700">
           <li className="flex gap-3">
-            <span className="text-indigo-400 mt-1">→</span>
-            <span>Introduced AI voice generation (Amazon Polly, then iSpring) as a first step — validating that AI narration was viable before committing to a full platform switch</span>
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span>Started with Amazon Polly for AI voice generation to test whether AI narration was viable before committing to anything bigger</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-indigo-400 mt-1">→</span>
-            <span>Researched and ran trials on Synthesia as a unified platform, then built and presented a business case to senior management</span>
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span>Moved to iSpring as a next step, then researched Synthesia as a unified platform. Built and presented a business case to senior management.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-indigo-400 mt-1">→</span>
-            <span>Led full migration to Synthesia for scripting, AI avatar recording, file storage, SME review, and multilingual translation — all in one platform</span>
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span>Led migration to Synthesia covering scripting, avatar recording, file storage, SME review, and multilingual translation in one platform</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-indigo-400 mt-1">→</span>
-            <span>Designed and built standardised, branded video templates in the Synthesia library, reviewed and approved with our UX designer — including a separate template set for a newly launched product line with its own distinct branding</span>
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span>Designed branded video templates with our UX designer, including a separate set for a newly launched product line with its own branding</span>
           </li>
         </ul>
       </section>
@@ -55,7 +51,7 @@ export default function Synthesia() {
           {[
             { stat: '~50%', label: 'Increase in production capacity' },
             { stat: '6', label: 'Languages enabled for localisation' },
-            { stat: '2→7+', label: 'Videos per year (major + release-based)' },
+            { stat: '2 to 7+', label: 'Videos per year' },
           ].map(({ stat, label }) => (
             <div key={stat} className="bg-indigo-50 rounded-xl p-5 text-center">
               <p className="text-2xl font-bold text-indigo-700 mb-1">{stat}</p>
@@ -64,8 +60,7 @@ export default function Synthesia() {
           ))}
         </div>
         <p className="text-slate-700 leading-relaxed">
-          Output grew from 2–3 major trainings per year to 3–4 plus 4 release-based videos annually.
-          Multilingual localisation into 6 languages opened content to our full global customer base for the first time.
+          Multilingual localisation into 6 languages opened training to our full global customer base for the first time.
         </p>
       </section>
     </main>

@@ -7,7 +7,7 @@ export default function SampleVideo() {
       <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 4</p>
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Instructional Video</h1>
       <p className="text-slate-500 text-sm mb-2">Script Writing · Screen Recording · Synthesia Avatar Narration</p>
-      <p className="text-slate-500 text-sm italic mb-8">Topic: Introduction to Using an AI Coding Assistant in VS Code</p>
+      <p className="text-slate-500 text-sm italic mb-8">Topic: Using an AI Coding Assistant in VS Code</p>
 
       <section className="mb-8">
         <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow mb-2">

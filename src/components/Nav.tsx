@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const links = [
@@ -9,25 +10,61 @@ const links = [
 ]
 
 export default function Nav() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <nav className="bg-slate-900 text-white px-6 py-4 flex flex-wrap gap-4 items-center">
-      <span className="font-semibold text-lg mr-4">Sandra Antony</span>
-      {links.map(({ to, label }) => (
-        <NavLink
-          key={to}
-          to={to}
-          end={to === '/'}
-          className={({ isActive }) =>
-            `text-sm px-3 py-1 rounded transition-colors ${
-              isActive
-                ? 'bg-slate-700 text-white'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800'
-            }`
-          }
+    <nav className="bg-slate-900 text-white px-6 py-4">
+      <div className="flex items-center justify-between">
+        <span className="font-semibold text-lg">Sandra Antony</span>
+
+        {/* Hamburger button — mobile only */}
+        <button
+          className="sm:hidden text-slate-300 hover:text-white"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
-          {label}
-        </NavLink>
-      ))}
+          {open ? '✕' : '☰'}
+        </button>
+
+        {/* Desktop links */}
+        <div className="hidden sm:flex gap-2 flex-wrap">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              className={({ isActive }) =>
+                `text-sm px-3 py-1 rounded transition-colors ${
+                  isActive ? 'bg-slate-700 text-white' : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="sm:hidden mt-3 flex flex-col gap-1">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `text-sm px-3 py-2 rounded transition-colors ${
+                  isActive ? 'bg-slate-700 text-white' : 'text-slate-300 hover:text-white hover:bg-slate-800'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+      )}
     </nav>
   )
 }

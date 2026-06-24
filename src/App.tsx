@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Certification from './pages/Certification'
 import Synthesia from './pages/Synthesia'
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/ai-prototype" element={<AIPrototype />} />
           <Route path="/sample-video" element={<SampleVideo />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   )
