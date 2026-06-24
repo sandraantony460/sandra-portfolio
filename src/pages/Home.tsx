@@ -86,7 +86,7 @@ export default function Home() {
         <p className="text-slate-700">
           <a href="mailto:sandraantony460@gmail.com" className="text-indigo-600 hover:underline">sandraantony460@gmail.com</a>
           {' · '}
-          <a href="https://www.linkedin.com/in/sandra-antony" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sandra-a-b255707b/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">LinkedIn</a>
         </p>
       </section>
     </main>
