@@ -81,6 +81,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mb-10">
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">Tools & Technology</h2>
+        <div className="space-y-3">
+          {[
+            { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
+            { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
+            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
+            { category: 'Documentation & Collaboration', tools: 'Confluence, SharePoint, Adobe FrameMaker, Advanced MS Office, Google Workspace' },
+            { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
+            { category: 'Programming', tools: 'Python, SQL, HTML' },
+          ].map(({ category, tools }) => (
+            <div key={category} className="flex gap-4">
+              <span className="w-52 shrink-0 text-sm font-medium text-slate-500">{category}</span>
+              <span className="text-sm text-slate-700">{tools}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Get in Touch</h2>
         <p className="text-slate-700">
