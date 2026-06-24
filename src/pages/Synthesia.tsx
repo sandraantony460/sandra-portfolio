@@ -7,19 +7,32 @@ export default function Synthesia() {
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-slate-800 mb-3">The Challenge</h2>
+        <p className="text-slate-700 leading-relaxed mb-3">
+          Four Js develops technically complex, extensively documented products — GBC, BDL, and others — with
+          quarterly release cycles. With a small team and a vast content surface, keeping training materials
+          current was a constant battle. Every release meant potential re-recording, and conventional production
+          tools simply couldn't keep pace.
+        </p>
         <p className="text-slate-700 leading-relaxed">
-          When I joined, our video training process relied on manual voiceover recording, separate editing tools,
-          and inconsistent file storage. The team could only produce 2–3 major training videos per year, and any
-          update meant re-recording from scratch.
+          When I joined, the video process relied on manual voiceover recording, separate editing tools, and
+          inconsistent file storage. The team could only produce 2–3 major training videos per year — and any
+          update meant starting from scratch.
         </p>
       </section>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-slate-800 mb-3">My Approach</h2>
+        <p className="text-slate-700 leading-relaxed mb-4">
+          The constraint was clear: a small team, a large and fast-moving product suite, and no room for
+          slow conventional production cycles. Rather than hiring more resource, I looked at where AI could
+          absorb the repetitive, time-intensive parts of production — freeing the team to focus on design
+          quality and content accuracy. The tool selection evolved deliberately, starting with voice generation
+          and building toward a fully integrated AI-first pipeline.
+        </p>
         <ul className="space-y-3 text-slate-700">
           <li className="flex gap-3">
             <span className="text-indigo-400 mt-1">→</span>
-            <span>Introduced AI voice generation (Amazon Polly, then iSpring) as an initial improvement to the existing workflow</span>
+            <span>Introduced AI voice generation (Amazon Polly, then iSpring) as a first step — validating that AI narration was viable before committing to a full platform switch</span>
           </li>
           <li className="flex gap-3">
             <span className="text-indigo-400 mt-1">→</span>
