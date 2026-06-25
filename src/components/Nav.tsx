@@ -6,6 +6,7 @@ const links = [
   { to: '/certification', label: 'Certification Programme' },
   { to: '/synthesia', label: 'Synthesia Transformation' },
   { to: '/ai-prototype', label: 'AI-Embedded Learning' },
+  { to: '/mobile-apps', label: 'Course Development' },
   { to: '/sample-video', label: 'Sample Video' },
 ]
 

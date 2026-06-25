@@ -6,6 +6,7 @@ import Certification from './pages/Certification'
 import Synthesia from './pages/Synthesia'
 import AIPrototype from './pages/AIPrototype'
 import SampleVideo from './pages/SampleVideo'
+import MobileApps from './pages/MobileApps'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/certification" element={<Certification />} />
           <Route path="/synthesia" element={<Synthesia />} />
           <Route path="/ai-prototype" element={<AIPrototype />} />
+          <Route path="/mobile-apps" element={<MobileApps />} />
           <Route path="/sample-video" element={<SampleVideo />} />
         </Routes>
         <Footer />
