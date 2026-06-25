@@ -9,7 +9,7 @@ export default function MobileApps() {
     >
 
       <div className="bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 mb-2 text-sm text-slate-600">
-        Course content and LMS screenshots are from an internal platform and cannot be shared publicly. Visuals shown are reconstructed mockups. Company branding has been removed.
+        This is a real course from my portfolio, presented here as representative of the end-to-end process I apply across all course development projects. Course content and LMS screenshots are from an internal platform and cannot be shared publicly. Visuals shown are reconstructed mockups. Company branding has been removed.
       </div>
 
       <section>
