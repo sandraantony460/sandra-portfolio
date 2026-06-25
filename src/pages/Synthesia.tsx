@@ -1,11 +1,14 @@
+import CaseStudyLayout from '../components/CaseStudyLayout'
+
 export default function Synthesia() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 2</p>
-      <h1 className="text-3xl font-bold text-slate-900 mb-4">Synthesia-Based Video Production Transformation</h1>
-      <p className="text-slate-500 text-sm mb-8">AI Video Production · Workflow Design · Localisation</p>
+    <CaseStudyLayout
+      eyebrow="Case Study 2"
+      title="Synthesia-Based Video Production Transformation"
+      tags="AI Video Production · Workflow Design · Localisation"
+    >
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">The Problem</h2>
         <p className="text-slate-700 leading-relaxed mb-3">
           Four Js has technically complex products with extensive documentation and quarterly release cycles.
@@ -18,7 +21,7 @@ export default function Synthesia() {
         </p>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Did</h2>
         <p className="text-slate-700 leading-relaxed mb-4">
           The constraint was a small team against a large, fast-moving product suite. Rather than hiring,
@@ -45,7 +48,7 @@ export default function Synthesia() {
         </ul>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Results</h2>
         <div className="grid gap-4 sm:grid-cols-3 mb-4">
           {[
@@ -63,6 +66,6 @@ export default function Synthesia() {
           Multilingual localisation into 6 languages opened training to our full global customer base for the first time.
         </p>
       </section>
-    </main>
+    </CaseStudyLayout>
   )
 }

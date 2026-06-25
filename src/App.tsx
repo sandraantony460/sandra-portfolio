@@ -10,7 +10,7 @@ import SampleVideo from './pages/SampleVideo'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-50">
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />

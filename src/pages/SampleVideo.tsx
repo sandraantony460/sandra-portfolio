@@ -1,79 +1,97 @@
 export default function SampleVideo() {
   const driveFileId = '1X4Adhm1mWfeOJIHR2MAC0eFmUcdNF8oS'
-  const embedUrl = `https://drive.google.com/file/d/${driveFileId}/preview`
+  const tibcoFileId = '1kVA6Qv5UcFWdj9Cg0uuAS6iq46pljEFp'
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
       <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 4</p>
-      <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Instructional Video</h1>
-      <p className="text-slate-500 text-sm mb-2">Script Writing · Screen Recording · Synthesia Avatar Narration</p>
-      <p className="text-slate-500 text-sm italic mb-8">Topic: Using an AI Coding Assistant in VS Code</p>
+      <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Work</h1>
+      <p className="text-slate-500 text-sm mb-12">Instructional Video · Live Presentation · Screen Recording</p>
 
-      <section className="mb-8">
+      {/* Sample 1 */}
+      <section className="mb-14">
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">Instructional Video</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Using an AI Coding Assistant in VS Code</p>
+        <p className="text-slate-700 text-sm leading-relaxed mb-5">
+          Built from scratch to demonstrate my end-to-end process: scripting, screen recording, and Synthesia avatar narration.
+          Generic topic so no confidential content is involved.
+        </p>
+
         <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow mb-2">
           <iframe
-            src={embedUrl}
+            src={`https://drive.google.com/file/d/${driveFileId}/preview`}
             className="w-full h-full"
             allow="autoplay"
-            title="Sample Instructional Video — AI Coding Assistant in VS Code"
+            title="Instructional Video — AI Coding Assistant in VS Code"
           />
         </div>
-        <p className="text-xs text-slate-400 text-center">
+        <p className="text-xs text-slate-400 text-center mb-6">
           Having trouble viewing?{' '}
-          <a
-            href={`https://drive.google.com/file/d/${driveFileId}/view`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-500 underline"
-          >
+          <a href={`https://drive.google.com/file/d/${driveFileId}/view`} target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline">
             Open in Google Drive
           </a>
         </p>
-      </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">Why I Built This</h2>
-        <p className="text-slate-700 leading-relaxed">
-          Since most of my actual project work is confidential, I built this short, original video from scratch to
-          demonstrate my end-to-end process — using a generic topic so the example carries no proprietary content.
-        </p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">My Process</h2>
-        <div className="space-y-5">
+        <h3 className="font-semibold text-slate-700 mb-3">My Process</h3>
+        <div className="space-y-4">
           {[
-            {
-              phase: 'Analysis',
-              detail: 'Identified the need for a clean, shareable example. Chose a topic that mirrors the structure of a real technical Quick Start video without using any employer content.',
-            },
-            {
-              phase: 'Design',
-              detail: 'Mapped the video to the same beats I use in real course design: Welcome → Objectives → Step-by-step demonstration → Summary → Closing. Wrote and refined the full script, ensuring stated objectives matched exactly what the demonstration would show.',
-            },
-            {
-              phase: 'Development',
-              detail: 'Finalised the script line by line, specifying exact function names, file names, and prompt wording. Recorded a screen capture showing the AI assistant generating a working function in the editor. Assembled scene by scene in Synthesia with a bridging line to smooth the transition from demonstration into summary.',
-            },
-            {
-              phase: 'Implementation',
-              detail: 'Ran the generated code on screen and showed the actual output — so the video itself models good verification practice rather than just describing it.',
-            },
-            {
-              phase: 'Evaluation',
-              detail: 'On review, caught a mismatch between stated objectives and final content — an earlier draft implied the video would cover extension setup, which the final version no longer did. Corrected the objectives to accurately reflect what the video actually delivers.',
-            },
+            { phase: 'Analysis', detail: 'Chose a generic topic that mirrors the structure of a real technical Quick Start video without using any employer content.' },
+            { phase: 'Design', detail: 'Mapped the video to the beats I use in real projects: objectives, step-by-step demo, summary. Wrote the full script ensuring stated objectives matched exactly what the demo showed.' },
+            { phase: 'Development', detail: 'Recorded a screen capture showing the AI assistant generating a working function in the editor. Assembled in Synthesia scene by scene.' },
+            { phase: 'Evaluation', detail: 'On review, caught a mismatch between the stated objectives and the final content. Corrected before publishing.' },
           ].map(({ phase, detail }) => (
             <div key={phase} className="flex gap-4">
-              <div className="w-28 shrink-0">
-                <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-2 py-1 rounded">
-                  {phase}
-                </span>
+              <div className="w-24 shrink-0">
+                <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-2 py-1 rounded">{phase}</span>
               </div>
               <p className="text-slate-700 text-sm leading-relaxed">{detail}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Sample 2 */}
+      <section className="mb-14">
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">Technical Presentation — TIBCO Streaming & Spotfire</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Real-Time Tweet Analysis · 2021</p>
+        <p className="text-slate-700 text-sm leading-relaxed mb-5">
+          Live voiceover walkthrough demonstrating how to integrate TIBCO Streaming and Spotfire to fetch,
+          publish, and visualise real-time Twitter data. Covers configuring the Twitter input adapter,
+          creating a live data table, and building bar, line, and scatter plot visualisations in Spotfire.
+        </p>
+        <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow">
+          <iframe
+            src="https://www.youtube.com/embed/OOsjm4-JiSU"
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="TIBCO Streaming and Spotfire Presentation"
+          />
+        </div>
+      </section>
+
+      {/* Sample 3 */}
+      <section className="mb-10">
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">Technical Presentation — TIBCO Cloud Integration Connect</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Product Walkthrough · 2021</p>
+        <p className="text-slate-700 text-sm leading-relaxed mb-5">
+          Voiceover walkthrough of TIBCO Cloud Integration Connect, delivered to a technical audience at an international forum.
+        </p>
+
+        <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow mb-2">
+          <iframe
+            src={`https://drive.google.com/file/d/${tibcoFileId}/preview`}
+            className="w-full h-full"
+            allow="autoplay"
+            title="TIBCO Cloud Integration Connect Presentation"
+          />
+        </div>
+        <p className="text-xs text-slate-400 text-center">
+          Having trouble viewing?{' '}
+          <a href={`https://drive.google.com/file/d/${tibcoFileId}/view`} target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline">
+            Open in Google Drive
+          </a>
+        </p>
       </section>
     </main>
   )

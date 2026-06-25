@@ -1,15 +1,18 @@
+import CaseStudyLayout from '../components/CaseStudyLayout'
+
 export default function AIPrototype() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 3</p>
-      <h1 className="text-3xl font-bold text-slate-900 mb-4">AI-Embedded Learning Prototype</h1>
-      <p className="text-slate-500 text-sm mb-8">Prototype Design · AI Integration · Content Strategy</p>
+    <CaseStudyLayout
+      eyebrow="Case Study 3"
+      title="AI-Embedded Learning Prototype"
+      tags="Prototype Design · AI Integration · Content Strategy"
+    >
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 mb-10 text-sm text-amber-800">
         This project is in active development and not yet public. Happy to walk through the design and data strategy in detail.
       </div>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">The Problem</h2>
         <p className="text-slate-700 leading-relaxed mb-3">
           Genero BDL is a complex technical language. Reading documentation helps, but new developers often need
@@ -23,7 +26,7 @@ export default function AIPrototype() {
         </p>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Built</h2>
         <p className="text-slate-700 leading-relaxed mb-4">
           I built an HTML prototype using Claude to show the AI team what I had in mind: a search experience
@@ -50,7 +53,7 @@ export default function AIPrototype() {
         </ul>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Results (in progress)</h2>
         <div className="grid gap-4 sm:grid-cols-2 mb-5">
           {[
@@ -69,6 +72,6 @@ export default function AIPrototype() {
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Testing a Synthesia API + Claude pipeline to cut time-to-publish on new content</span></li>
         </ul>
       </section>
-    </main>
+    </CaseStudyLayout>
   )
 }

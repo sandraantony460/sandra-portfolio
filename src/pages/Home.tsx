@@ -1,17 +1,19 @@
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold text-slate-900 mb-2">Sandra Antony</h1>
-      <p className="text-lg text-indigo-600 font-medium mb-8">
-        Instructional Design & Learning Technology Manager · Dublin, Ireland
-      </p>
-
-      <section className="mb-10">
-        <p className="text-slate-700 leading-relaxed mb-4">
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 px-8 py-10 mb-10">
+        <h1 className="text-4xl font-bold text-slate-900 mb-2">Sandra Antony</h1>
+        <p className="text-lg text-indigo-600 font-medium mb-4">
+          Instructional Design & Learning Technology Manager · Dublin, Ireland
+        </p>
+        <p className="text-slate-600 leading-relaxed">
           I design and scale learning programmes across technical and enterprise environments.
           My focus is on measurable outcomes: completion rates, certification numbers, production efficiency,
           and using LMS data to make content decisions rather than guesses.
         </p>
+      </div>
+
+      <section className="mb-10">
         <p className="text-slate-700 leading-relaxed">
           Currently nominated as Head of Technical Publications and Training, I manage an LMS platform
           with <strong>902 active users</strong>, <strong>40+ courses</strong>, and <strong>3,100+ course assignments</strong>.
