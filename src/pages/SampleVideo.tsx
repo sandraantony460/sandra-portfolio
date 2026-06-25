@@ -39,7 +39,8 @@ export default function SampleVideo() {
             { phase: 'Analysis', detail: 'Chose a generic topic that mirrors the structure of a real technical Quick Start video without using any employer content.' },
             { phase: 'Design', detail: 'Mapped the video to the beats I use in real projects: objectives, step-by-step demo, summary. Wrote the full script ensuring stated objectives matched exactly what the demo showed.' },
             { phase: 'Development', detail: 'Recorded a screen capture showing the AI assistant generating a working function in the editor. Assembled in Synthesia scene by scene.' },
-            { phase: 'Evaluation', detail: 'On review, caught a mismatch between the stated objectives and the final content. Corrected before publishing.' },
+            { phase: 'Implementation', detail: 'Published to Google Drive and embedded in this portfolio. Available to share directly with stakeholders via link.' },
+            { phase: 'Evaluation', detail: 'Self-reviewed post-production for alignment between stated objectives and demonstrated content. As a portfolio sample, formal learner feedback is not available — in a live deployment, this would include completion data and post-course survey results.' },
           ].map(({ phase, detail }) => (
             <div key={phase} className="flex gap-4">
               <div className="w-24 shrink-0">
