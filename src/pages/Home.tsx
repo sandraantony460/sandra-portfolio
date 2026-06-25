@@ -9,7 +9,7 @@ export default function Home() {
         <p className="text-slate-600 leading-relaxed">
           I design and scale learning programmes across technical and enterprise environments.
           My focus is on measurable outcomes: completion rates, certification numbers, production efficiency,
-          and using LMS data to make content decisions.
+          and using LMS data and learner feedback to make content decisions.
         </p>
       </div>
 
