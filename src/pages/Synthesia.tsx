@@ -8,6 +8,10 @@ export default function Synthesia() {
       tags="AI Video Production · Workflow Design · Localisation"
     >
 
+      <div className="bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 mb-2 text-sm text-slate-600">
+        Screenshots are from my personal Synthesia account. The SharePoint folder structure shown is a reconstructed mockup — internal screenshots cannot be shared due to company NDA and data policies. Company branding has been removed from video output screenshots.
+      </div>
+
       <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">The Problem</h2>
         <p className="text-slate-700 leading-relaxed mb-3">
