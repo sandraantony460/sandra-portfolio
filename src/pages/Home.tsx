@@ -23,7 +23,7 @@ export default function Home() {
       <section className="mb-10">
         <div className="grid gap-4 sm:grid-cols-3">
           {[
-            { stat: '9+', label: 'Years in instructional design and learning technology' },
+            { stat: '8+', label: 'Years in instructional design and learning technology' },
             { stat: '902', label: 'Active LMS users managed' },
             { stat: '75+', label: 'Professionals certified globally' },
           ].map(({ stat, label }) => (
