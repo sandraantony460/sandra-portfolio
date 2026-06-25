@@ -8,8 +8,23 @@ export default function AIPrototype() {
       tags="Prototype Design · AI Integration · Content Strategy"
     >
 
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 mb-10 text-sm text-amber-800">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 mb-6 text-sm text-amber-800">
         This project is in active development and not yet public — the doc assistant is currently available to company partners only. Happy to walk through the design and data strategy in detail.
+      </div>
+
+      <div className="bg-indigo-50 border border-indigo-100 rounded-xl px-6 py-5 mb-10 flex flex-col sm:flex-row sm:items-center gap-4">
+        <div className="flex-1">
+          <p className="font-semibold text-indigo-900 mb-1">Interactive Prototype</p>
+          <p className="text-sm text-indigo-700">Try the AI learning assistant — ask a BDL question and see how it surfaces an answer, documentation links, and a relevant training video in one place.</p>
+        </div>
+        <a
+          href="/bdl-prototype.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0 inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-indigo-700 transition-colors"
+        >
+          Open Prototype →
+        </a>
       </div>
 
       <section>
@@ -71,14 +86,6 @@ export default function AIPrototype() {
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Phase 2 proposed: use real search data to identify high-demand topics with no existing video</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Testing a Synthesia API + Claude pipeline to cut time-to-publish on new content</span></li>
         </ul>
-        <a
-          href="/bdl-prototype.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-indigo-700 transition-colors"
-        >
-          View Interactive Prototype →
-        </a>
       </section>
     </CaseStudyLayout>
   )
