@@ -16,7 +16,7 @@ export default function Home() {
       <section className="mb-10">
         <p className="text-slate-700 leading-relaxed">
           Currently nominated as Head of Technical Publications and Training, I manage an LMS platform
-          with <strong>902 active users</strong>, <strong>40+ courses</strong>, and <strong>3,100+ course assignments</strong>.
+          with <strong>902 active users</strong>, <strong>30+ courses</strong>, and <strong>3,100+ course assignments</strong>.
         </p>
       </section>
 
