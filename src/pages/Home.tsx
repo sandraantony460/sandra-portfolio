@@ -19,7 +19,7 @@ export default function Home() {
           L&D Manager · Instructional Designer
         </span>
         <p className="text-slate-600 leading-relaxed">
-          I design and scale learning programmes across technical and enterprise environments, with a focus on measurable outcomes: completion rates, certification numbers, production efficiency, and using LMS data and learner feedback to make content decisions.
+          I design and scale learning programmes across technical and enterprise environments — working end-to-end from needs analysis and content creation through to LMS deployment and evaluation. My focus is on measurable outcomes: completion rates, production efficiency, certification numbers, and using LMS data and learner feedback to make content decisions.
         </p>
       </div>
 
