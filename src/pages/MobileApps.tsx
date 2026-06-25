@@ -5,7 +5,7 @@ export default function MobileApps() {
     <CaseStudyLayout
       eyebrow="Case Study 4"
       title="Genero Mobile Apps Course Development"
-      tags="Instructional Design · SME Collaboration · Hands-On Development"
+      tags="ADDIE · SME Collaboration · TalentLMS · Hands-On Development"
     >
 
       <div className="bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 mb-2 text-sm text-slate-600">
@@ -124,7 +124,32 @@ export default function MobileApps() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-slate-800 mb-4">Results</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-3">Implementation</h2>
+        <p className="text-slate-700 leading-relaxed mb-4">
+          Once development and SME review cycles were complete, the course went through a final sign-off with my direct manager before being published.
+        </p>
+        <ul className="space-y-3 text-slate-700">
+          <li className="flex gap-3">
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span><strong>Manager review and sign-off</strong> — final content reviewed and approved by my direct manager before the course went live.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span><strong>Published to TalentLMS</strong> — course activated in the LMS using the course active checkbox, making it immediately available in the catalogue.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span><strong>Broadcast email notification</strong> — TalentLMS automatically sent a notification to all users announcing the new course.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-indigo-400 mt-1 shrink-0">→</span>
+            <span><strong>Learner self-enrolment</strong> — users followed the steps in the email to find and enrol via the "Get this course" button in the catalogue.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">Evaluation</h2>
         <div className="grid gap-4 sm:grid-cols-3 mb-5">
           {[
             { stat: '6', label: 'New users joined the e-learning portal through this course' },
