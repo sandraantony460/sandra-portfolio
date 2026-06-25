@@ -8,6 +8,7 @@ export default function SampleVideo() {
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Work</h1>
       <p className="text-slate-500 text-sm mb-12">Instructional Video · Interactive Scenario · Live Presentation · Screen Recording</p>
 
+
       {/* Sample 1 */}
       <section className="mb-14">
         <h2 className="text-xl font-semibold text-slate-800 mb-1">Instructional Video</h2>

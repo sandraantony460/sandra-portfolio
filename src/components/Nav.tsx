@@ -7,7 +7,7 @@ const links = [
   { to: '/synthesia', label: 'Synthesia Transformation' },
   { to: '/ai-prototype', label: 'AI-Embedded Learning' },
   { to: '/mobile-apps', label: 'Course Development' },
-  { to: '/sample-video', label: 'Sample Video' },
+  { to: '/sample-video', label: 'Sample Work' },
 ]
 
 export default function Nav() {
