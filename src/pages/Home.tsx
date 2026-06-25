@@ -4,12 +4,12 @@ export default function Home() {
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 px-8 py-10 mb-10">
         <h1 className="text-4xl font-bold text-slate-900 mb-2">Sandra Antony</h1>
         <p className="text-lg text-indigo-600 font-medium mb-4">
-          Instructional Design & Learning Technology Manager · Dublin, Ireland
+          Learning & Development Manager · Instructional Designer · Dublin, Ireland
         </p>
         <p className="text-slate-600 leading-relaxed">
           I design and scale learning programmes across technical and enterprise environments.
           My focus is on measurable outcomes: completion rates, certification numbers, production efficiency,
-          and using LMS data to make content decisions rather than guesses.
+          and using LMS data to make content decisions.
         </p>
       </div>
 
@@ -39,11 +39,12 @@ export default function Home() {
         <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Do</h2>
         <ul className="space-y-2 text-slate-700">
           {[
+            'Instructional design methodology: ADDIE and Agile frameworks adapted to technical and enterprise learning environments',
             'End-to-end curriculum design: needs analysis, content strategy, LMS deployment, outcome measurement',
-            'Certification programme governance: 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA',
-            'AI-powered production workflows using Synthesia, Claude, and Amazon Polly',
-            'Data-driven improvement: completion rates lifted from 50-60% to 75-80% through evidence-based redesign',
+            'AI-powered production workflows using Synthesia, Claude, and Amazon Polly · GitHub collaboration with AI teams',
             'Cross-functional collaboration with R&D, PS, UX, senior leadership, and academic partners',
+            'Certification programme governance: 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA',
+            'Data-driven improvement: completion rates lifted from 50-60% to 75-80% through evidence-based redesign',
           ].map((item) => (
             <li key={item} className="flex gap-3">
               <span className="text-indigo-400 mt-1 shrink-0">→</span>
@@ -60,7 +61,7 @@ export default function Home() {
             { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
             { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
             { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
-            { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace' },
+            { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace, GitHub' },
             { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
             { category: 'Programming', tools: 'Python, SQL, HTML' },
           ].map(({ category, tools }) => (
