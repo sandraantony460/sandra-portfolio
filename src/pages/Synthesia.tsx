@@ -78,7 +78,7 @@ export default function Synthesia() {
           </li>
           <li className="flex gap-3">
             <span className="text-indigo-400 mt-1 shrink-0">→</span>
-            <span><strong>Translation built in.</strong> One click translates the video into another language. This is how we enabled 6 languages without 6× the production effort.</span>
+            <span><strong>Translation built in.</strong> One click translates the video into another language. This is how we launched 6 languages — with more added on customer request — without 6× the production effort.</span>
           </li>
         </ul>
         <div className="space-y-3">
@@ -112,7 +112,7 @@ export default function Synthesia() {
           ))}
         </div>
         <p className="text-slate-700 leading-relaxed">
-          Multilingual localisation into 6 languages opened training to our full global customer base for the first time.
+          Multilingual localisation launched in 6 languages — expanding further on customer request — opened training to our full global customer base for the first time.
         </p>
       </section>
     </CaseStudyLayout>
