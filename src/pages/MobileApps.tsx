@@ -24,6 +24,8 @@ export default function MobileApps() {
           could follow. And critically, there was a visible gap in the certification programme — questions existed
           in the knowledge bank that had no corresponding training material to support them.
         </p>
+      </section>
+
       <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Analysis</h2>
         <ul className="space-y-3 text-slate-700">
