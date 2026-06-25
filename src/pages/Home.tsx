@@ -86,7 +86,7 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             { href: '/certification', title: 'Certification Programme', desc: 'Two-tier technical certification. Completion up from 50-60% to 75-80%. 75+ certified globally.' },
-            { href: '/synthesia', title: 'Synthesia Transformation', desc: 'AI video pipeline. 50% capacity increase, 6 languages launched with more added on customer request, 7+ videos per year.' },
+            { href: '/synthesia', title: 'Synthesia Transformation', desc: 'AI video pipeline. 50% capacity increase, 6 languages launched with more added on customer request.' },
             { href: '/ai-prototype', title: 'AI-Embedded Learning', desc: 'Prototype surfacing 25 BDL videos inside the AI doc assistant at point of need.' },
             { href: '/sample-video', title: 'Sample Instructional Video', desc: 'Self-produced: script, screen recording, Synthesia narration.' },
           ].map(({ href, title, desc }) => (

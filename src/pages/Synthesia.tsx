@@ -91,7 +91,7 @@ export default function Synthesia() {
             <img src="/syn-collab.png" alt="Synthesia video with comment and collaboration options" className="rounded-xl border border-slate-200 w-full" />
           </div>
           <div>
-            <p className="text-xs text-slate-400 mb-2">The finished product — a branded Four Js Synthesia video with company logo, AI avatar, and professional layout. One of 7+ videos produced per year after the platform switch.</p>
+            <p className="text-xs text-slate-400 mb-2">The finished product — a branded Four Js Synthesia video with company logo, AI avatar, and professional layout. Representative of the video output after the platform switch.</p>
             <img src="/syn-output.png" alt="Four Js branded Synthesia video output" className="rounded-xl border border-slate-200 w-full" />
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function Synthesia() {
           {[
             { stat: '~50%', label: 'Increase in production capacity' },
             { stat: '6', label: 'Languages enabled for localisation' },
-            { stat: '2 to 7+', label: 'Videos per year' },
+            { stat: '2×+', label: 'Increase in video output per year' },
           ].map(({ stat, label }) => (
             <div key={stat} className="bg-indigo-50 rounded-xl p-5 text-center">
               <p className="text-2xl font-bold text-indigo-700 mb-1">{stat}</p>
