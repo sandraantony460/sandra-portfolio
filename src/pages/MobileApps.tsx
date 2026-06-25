@@ -137,6 +137,14 @@ export default function MobileApps() {
             <span className="text-indigo-400 mt-1 shrink-0">→</span>
             <span><strong>Published to TalentLMS</strong> — course activated in the LMS using the course active checkbox, making it immediately available in the catalogue.</span>
           </li>
+        </ul>
+
+        <div className="mt-4 mb-5">
+          <p className="text-xs text-slate-400 mb-2">LMS administrator view — adding content units to a course. Options include SCORM, xAPI, iFrame, video, and web content.</p>
+          <iframe src="/mockup-lms-admin.html" className="w-full rounded-xl border border-slate-200" style={{height: '380px'}} title="LMS admin add content dropdown" />
+        </div>
+
+        <ul className="space-y-3 text-slate-700">
           <li className="flex gap-3">
             <span className="text-indigo-400 mt-1 shrink-0">→</span>
             <span><strong>Broadcast email notification</strong> — TalentLMS automatically sent a notification to all users announcing the new course.</span>
