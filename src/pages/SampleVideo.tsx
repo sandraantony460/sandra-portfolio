@@ -65,6 +65,11 @@ export default function SampleVideo() {
             allowFullScreen
           />
         </div>
+        <p className="text-xs text-slate-400 text-center mt-2">
+          <a href="/onboarding/story.html" target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline">
+            Open in full screen →
+          </a>
+        </p>
       </section>
 
       {/* Sample 2 */}
