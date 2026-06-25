@@ -105,7 +105,7 @@ export default function Certification() {
         <div className="grid gap-4 sm:grid-cols-3 mb-6">
           {[
             { stat: '75-80%', label: 'Completion rate (up from 50-60%)' },
-            { stat: '75+', label: 'Professionals certified globally' },
+            { stat: '75+', label: '50+ certified in knowledge stream · 25+ in practical assessment' },
             { stat: 'Year 3', label: 'Programme still running' },
           ].map(({ stat, label }) => (
             <div key={stat} className="bg-indigo-50 rounded-xl p-5 text-center">
