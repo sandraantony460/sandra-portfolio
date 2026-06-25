@@ -75,11 +75,11 @@ export default function SampleVideo() {
 
       {/* Sample 2 */}
       <section className="mb-14">
-        <h2 className="text-xl font-semibold text-slate-800 mb-1">Technical Presentation — TIBCO Streaming & Spotfire</h2>
-        <p className="text-slate-500 text-sm italic mb-4">Real-Time Tweet Analysis · 2021</p>
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">ILT Delivery — TIBCO Streaming & Spotfire</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Instructor-Led Technical Session · International Forum · 2021</p>
         <p className="text-slate-700 text-sm leading-relaxed mb-5">
-          Live voiceover walkthrough demonstrating how to integrate TIBCO Streaming and Spotfire to fetch,
-          publish, and visualise real-time Twitter data. Covers configuring the Twitter input adapter,
+          Live instructor-led session delivered to a technical audience at an international forum. Covers integrating TIBCO Streaming and Spotfire to fetch,
+          publish, and visualise real-time Twitter data — configuring the Twitter input adapter,
           creating a live data table, and building bar, line, and scatter plot visualisations in Spotfire.
         </p>
         <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow">
@@ -95,10 +95,10 @@ export default function SampleVideo() {
 
       {/* Sample 3 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-slate-800 mb-1">Technical Presentation — TIBCO Cloud Integration Connect</h2>
-        <p className="text-slate-500 text-sm italic mb-4">Product Walkthrough · 2021</p>
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">ILT Delivery — TIBCO Cloud Integration Connect</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Instructor-Led Product Walkthrough · International Forum · 2021</p>
         <p className="text-slate-700 text-sm leading-relaxed mb-5">
-          Voiceover walkthrough of TIBCO Cloud Integration Connect, delivered to a technical audience at an international forum.
+          Instructor-led product walkthrough of TIBCO Cloud Integration Connect, delivered to a technical audience at an international forum. Designed and delivered as a structured live session with supporting materials.
         </p>
 
         <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow mb-2">

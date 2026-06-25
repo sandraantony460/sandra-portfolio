@@ -118,6 +118,7 @@ export default function Certification() {
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Content gaps found during question bank development led to new courses being added</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Organisation now has a verifiable, data-backed measure of learning ROI for the first time</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Adoption expanded from internal developers to customers requesting certification</span></li>
+          <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Certified developers actively recommend the programme to colleagues and junior developers — measurable peer-driven behaviour change within customer organisations</span></li>
         </ul>
       </section>
     </CaseStudyLayout>

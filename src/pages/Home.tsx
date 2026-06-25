@@ -39,12 +39,12 @@ export default function Home() {
         <h2 className="text-xl font-semibold text-slate-800 mb-3">What I Do</h2>
         <ul className="space-y-2 text-slate-700">
           {[
-            'Instructional design methodology: ADDIE and Agile frameworks adapted to technical and enterprise learning environments',
-            'End-to-end curriculum design: needs analysis, content strategy, LMS deployment, outcome measurement',
+            'Instructional design methodology: ADDIE and Agile — embedded in R&D sprint cycles to align course releases with product updates',
+            'End-to-end curriculum design: needs analysis, content strategy, LMS deployment, outcome measurement · ILT delivery at international technical forums',
             'AI-powered production workflows using Synthesia, Claude, and Amazon Polly · GitHub collaboration with AI teams',
-            'Cross-functional collaboration with R&D, PS, UX, senior leadership, and academic partners',
-            'Certification programme governance: 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA',
-            'Data-driven improvement: completion rates lifted from 50-60% to 75-80% through evidence-based redesign',
+            'Cross-functional collaboration with R&D, PS, UX, senior leadership, and academic partners · university internship programme (US, 6 interns per cohort)',
+            'Certification programme governance: 1,000-question knowledge bank, scenario-based assessments, multi-stakeholder QA · managing a direct report',
+            'Data-driven improvement using LMS metrics, post-course surveys, and direct feedback from customer-facing PS and training teams — completion rates lifted from 50-60% to 75-80%',
           ].map((item) => (
             <li key={item} className="flex gap-3">
               <span className="text-indigo-400 mt-1 shrink-0">→</span>
@@ -60,10 +60,10 @@ export default function Home() {
           {[
             { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
             { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
-            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
+            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence, JIRA automation' },
             { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace, GitHub' },
             { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
-            { category: 'Programming', tools: 'Python, SQL, HTML' },
+            { category: 'Development', tools: 'Python, SQL, HTML, React, Vite, Tailwind CSS' },
           ].map(({ category, tools }) => (
             <div key={category} className="flex gap-4">
               <span className="w-48 shrink-0 text-sm font-medium text-slate-500">{category}</span>
@@ -104,11 +104,12 @@ export default function Home() {
 
       <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Get in Touch</h2>
-        <p className="text-slate-700">
+        <p className="text-slate-700 mb-3">
           <a href="mailto:sandraantony460@gmail.com" className="text-indigo-600 hover:underline">sandraantony460@gmail.com</a>
           {' · '}
           <a href="https://www.linkedin.com/in/sandra-a-b255707b/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">LinkedIn</a>
         </p>
+        <p className="text-xs text-slate-400">This portfolio is built in React, Vite, and Tailwind CSS and deployed via Cloudflare Pages.</p>
       </section>
     </main>
   )
