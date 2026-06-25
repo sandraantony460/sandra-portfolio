@@ -24,8 +24,6 @@ export default function MobileApps() {
           could follow. And critically, there was a visible gap in the certification programme — questions existed
           in the knowledge bank that had no corresponding training material to support them.
         </p>
-      </section>
-
       <section>
         <h2 className="text-xl font-semibold text-slate-800 mb-3">Analysis</h2>
         <ul className="space-y-3 text-slate-700">
@@ -142,6 +140,11 @@ export default function MobileApps() {
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>The research process produced documentation that did not previously exist, benefiting the wider team beyond the course itself</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Enterprise customers who would otherwise have had no learning path for the product are actively using the course today</span></li>
         </ul>
+
+        <div className="mt-5">
+          <p className="text-xs text-slate-400 mb-2">The course as it appeared in the LMS — structured into core units, labs, and cert-critical content.</p>
+          <iframe src="/mockup-lms-course.html" className="w-full rounded-xl border border-slate-200" style={{height: '420px'}} title="LMS course page" />
+        </div>
 
       </section>
 

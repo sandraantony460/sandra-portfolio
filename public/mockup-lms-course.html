@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LMS Course Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; padding: 16px; }
+  .browser { background: white; border-radius: 8px; overflow: hidden; border: 1px solid #d0d0d0; max-width: 680px; margin: 0 auto; font-size: 13px; }
+  .topbar { background: #2e75b6; padding: 8px 14px; color: white; font-size: 12px; }
+  .topbar strong { font-weight: 600; }
+  .breadcrumb { color: rgba(255,255,255,0.75); }
+  .body { display: flex; gap: 0; }
+  .sidebar { width: 180px; flex-shrink: 0; background: #f7f7f7; border-right: 1px solid #e5e5e5; padding: 14px 10px; }
+  .thumb { width: 100%; aspect-ratio: 16/9; background: #dde8f5; border-radius: 4px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; }
+  .thumb svg { width: 28px; height: 28px; opacity: 0.4; }
+  .btn-enroll { width: 100%; background: #2e75b6; color: white; border: none; border-radius: 4px; padding: 8px; font-size: 12px; font-weight: 600; cursor: default; }
+  .main { flex: 1; padding: 16px 18px; }
+  .course-id { font-size: 10px; color: #999; margin-bottom: 3px; }
+  .course-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+  .desc { font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 14px; }
+  .section-label { font-size: 10px; font-weight: 700; color: #333; letter-spacing: 0.5px; text-transform: uppercase; margin: 10px 0 6px; padding-bottom: 4px; border-bottom: 1px solid #e5e5e5; }
+  .unit { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+  .unit:last-child { border-bottom: none; }
+  .unit-icon { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #bbb; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .unit-icon svg { width: 10px; height: 10px; }
+  .unit-name { font-size: 12px; color: #333; }
+  .unit-badge { margin-left: auto; font-size: 10px; padding: 2px 6px; border-radius: 3px; flex-shrink: 0; }
+  .cert { background: #fce4e4; color: #c62828; }
+  .support { background: #e3f2fd; color: #1565c0; }
+  .practical { background: #e8f5e9; color: #2e7d32; }
+</style>
+</head>
+<body>
+<div class="browser">
+  <div class="topbar">
+    <span class="breadcrumb">Home / Course catalog / </span>
+    <strong>Genero Mobile Apps (MOB-001)</strong>
+  </div>
+  <div class="body">
+    <div class="sidebar">
+      <div class="thumb">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="2" width="10" height="20" rx="2" stroke="#2e75b6" stroke-width="1.5"/>
+          <line x1="10" y1="5" x2="14" y2="5" stroke="#2e75b6" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="12" cy="19" r="1" fill="#2e75b6"/>
+        </svg>
+      </div>
+      <button class="btn-enroll">Get this course</button>
+    </div>
+    <div class="main">
+      <p class="course-id">Developer · MOB-001</p>
+      <p class="course-title">Genero Mobile Apps</p>
+      <p class="desc">For developers building or maintaining Genero Mobile applications. Covers the mobile runtime, responsive layouts, application architectures, local data, and deployment on Android.</p>
+
+      <p class="section-label">Introduction</p>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Course Introduction</span>
+      </div>
+
+      <p class="section-label">Core Units</p>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Fundamentals of Genero Mobile</span>
+        <span class="unit-badge cert">Cert-Critical</span>
+      </div>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Responsive Layout</span>
+        <span class="unit-badge support">Supporting</span>
+      </div>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Mobile UI and UX Behaviours</span>
+        <span class="unit-badge cert">Cert-Critical</span>
+      </div>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Application Architectures</span>
+        <span class="unit-badge cert">Cert-Critical</span>
+      </div>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="#888"><polygon points="3,2 8,5 3,8"/></svg></div>
+        <span class="unit-name">Local Data with SQLite</span>
+        <span class="unit-badge support">Supporting</span>
+      </div>
+
+      <p class="section-label">Labs</p>
+      <div class="unit">
+        <div class="unit-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#888" stroke-width="1.2"><rect x="1.5" y="1.5" width="7" height="7" rx="1"/></svg></div>
+        <span class="unit-name">Build a Simple Genero Mobile App</span>
+        <span class="unit-badge practical">Practical</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
