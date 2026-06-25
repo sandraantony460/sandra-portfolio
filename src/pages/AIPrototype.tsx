@@ -9,7 +9,7 @@ export default function AIPrototype() {
     >
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 mb-10 text-sm text-amber-800">
-        This project is in active development and not yet public. Happy to walk through the design and data strategy in detail.
+        This project is in active development and not yet public — the doc assistant is currently available to company partners only. Happy to walk through the design and data strategy in detail.
       </div>
 
       <section>
@@ -66,11 +66,19 @@ export default function AIPrototype() {
             </div>
           ))}
         </div>
-        <ul className="space-y-2 text-slate-700">
+        <ul className="space-y-2 text-slate-700 mb-8">
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Prototype accepted by the AI team and currently in integration planning</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Phase 2 proposed: use real search data to identify high-demand topics with no existing video</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Testing a Synthesia API + Claude pipeline to cut time-to-publish on new content</span></li>
         </ul>
+        <a
+          href="/bdl-prototype.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-indigo-700 transition-colors"
+        >
+          View Interactive Prototype →
+        </a>
       </section>
     </CaseStudyLayout>
   )

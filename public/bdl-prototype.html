@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Learning Assistant — BDL Prototype</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; min-height: 100vh; }
+
+    .header { background: #1a2b4a; color: white; padding: 14px 24px; display: flex; align-items: center; gap: 12px; }
+    .header-logo { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+    .header-sub { font-size: 13px; color: #93afd4; }
+    .badge { margin-left: auto; background: #2563eb; color: white; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+
+    .container { max-width: 820px; margin: 32px auto; padding: 0 20px 60px; }
+
+    .search-card { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 24px; }
+    .search-label { font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 10px; }
+    .search-row { display: flex; gap: 10px; }
+    .search-input { flex: 1; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 11px 14px; font-size: 14px; color: #1e293b; outline: none; transition: border-color 0.2s; }
+    .search-input:focus { border-color: #2563eb; }
+    .search-btn { background: #2563eb; color: white; border: none; border-radius: 8px; padding: 11px 20px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .search-btn:hover { background: #1d4ed8; }
+
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .chip { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; border-radius: 20px; padding: 5px 12px; font-size: 12px; cursor: pointer; transition: background 0.15s; }
+    .chip:hover { background: #dbeafe; }
+
+    .results { display: none; }
+
+    .ai-answer { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 16px; }
+    .ai-label { display: flex; align-items: center; gap-8px; font-size: 12px; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 12px; gap: 6px; }
+    .ai-dot { width: 8px; height: 8px; background: #2563eb; border-radius: 50%; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    .ai-text { font-size: 14px; color: #334155; line-height: 1.7; }
+    .ai-text code { background: #f1f5f9; color: #0f172a; padding: 1px 5px; border-radius: 4px; font-size: 13px; font-family: 'Courier New', monospace; }
+
+    .docs-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .doc-link { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 14px; font-size: 13px; color: #2563eb; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .doc-link:hover { background: #eff6ff; }
+    .doc-icon { font-size: 16px; }
+
+    .video-card { background: white; border-radius: 14px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #2563eb; display: flex; gap: 16px; align-items: flex-start; }
+    .video-thumb { width: 96px; height: 60px; background: #1a2b4a; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .play-icon { width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid white; margin-left: 3px; }
+    .video-meta { flex: 1; }
+    .video-tag { font-size: 11px; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
+    .video-title { font-size: 15px; font-weight: 600; color: #1e293b; margin-bottom: 4px; }
+    .video-desc { font-size: 13px; color: #64748b; line-height: 1.5; }
+    .video-btn { margin-top: 10px; background: #eff6ff; color: #2563eb; border: none; border-radius: 6px; padding: 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .video-btn:hover { background: #dbeafe; }
+
+    .no-video { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 14px 18px; font-size: 13px; color: #92400e; display: none; }
+
+    .empty-state { text-align: center; padding: 40px 20px; color: #94a3b8; font-size: 14px; }
+
+    @media (max-width: 600px) { .docs-row { grid-template-columns: 1fr; } .video-card { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-logo">AI Learning Assistant</div>
+    <div class="header-sub">Ask anything about BDL</div>
+  </div>
+  <div class="badge">Prototype</div>
+</div>
+
+<div class="container">
+
+  <div class="search-card">
+    <div class="search-label">What do you need help with?</div>
+    <div class="search-row">
+      <input class="search-input" id="query" type="text" placeholder="e.g. How do I define a dynamic array in BDL?" />
+      <button class="search-btn" onclick="search()">Ask</button>
+    </div>
+    <div class="chips">
+      <span class="chip" onclick="ask('How do I declare a dynamic array in BDL?')">Dynamic arrays</span>
+      <span class="chip" onclick="ask('What is a record type in BDL?')">Record types</span>
+      <span class="chip" onclick="ask('How do I handle exceptions in BDL?')">Exception handling</span>
+      <span class="chip" onclick="ask('How do I connect to a database in BDL?')">Database connection</span>
+      <span class="chip" onclick="ask('How do I use a FOR loop in BDL?')">FOR loops</span>
+      <span class="chip" onclick="ask('How do I create a report in BDL?')">Reports</span>
+    </div>
+  </div>
+
+  <div class="results" id="results">
+
+    <div class="ai-answer">
+      <div class="ai-label"><div class="ai-dot"></div> AI Answer</div>
+      <div class="ai-text" id="ai-text"></div>
+      <div class="docs-row" id="docs-row"></div>
+    </div>
+
+    <div class="video-card" id="video-card" style="display:none;">
+      <div class="video-thumb"><div class="play-icon"></div></div>
+      <div class="video-meta">
+        <div class="video-tag">Recommended Training Video</div>
+        <div class="video-title" id="video-title"></div>
+        <div class="video-desc" id="video-desc"></div>
+        <button class="video-btn">Watch Video →</button>
+      </div>
+    </div>
+
+    <div class="no-video" id="no-video">
+      No training video available for this topic yet. Your question has been noted — topics like this help us prioritise what to produce next.
+    </div>
+
+  </div>
+
+  <div class="empty-state" id="empty-state">
+    Type a question above or select a topic to get started.
+  </div>
+
+</div>
+
+<script>
+const knowledge = [
+  {
+    keywords: ['dynamic array', 'array', 'dynarray'],
+    answer: `In  BDL, you can declare a dynamic array using the <code>DYNAMIC ARRAY</code> keyword. Unlike static arrays, dynamic arrays grow automatically as you add elements.<br><br>Example:<br><code>DEFINE myArr DYNAMIC ARRAY OF INTEGER</code><br><br>Use <code>myArr.appendElement()</code> to add items and <code>myArr.getLength()</code> to check the size. Dynamic arrays are zero-indexed in BDL.`,
+    docs: [
+      { label: 'DYNAMIC ARRAY syntax', url: '#' },
+      { label: 'Array functions reference', url: '#' },
+    ],
+    video: { title: 'Working with Arrays in  BDL', desc: 'Covers static and dynamic array declaration, iteration, and common array functions used in BDL programs.' }
+  },
+  {
+    keywords: ['record', 'record type', 'define record'],
+    answer: `A <code>RECORD</code> in BDL is a composite data type that groups related variables together. You define a record with <code>DEFINE myRec RECORD ... END RECORD</code>.<br><br>Records can be nested and can match database table structures using <code>LIKE tablename.*</code>, which is useful for cursor-based operations.`,
+    docs: [
+      { label: 'RECORD type declaration', url: '#' },
+      { label: 'Using LIKE with records', url: '#' },
+    ],
+    video: { title: 'Variables and Data Types in BDL', desc: 'Explains primitive types, records, and how to use LIKE to mirror database table structures in your BDL code.' }
+  },
+  {
+    keywords: ['exception', 'error', 'on exception', 'try catch', 'trap'],
+    answer: `BDL uses <code>TRY ... CATCH ... END TRY</code> blocks for exception handling. You can also use <code>WHENEVER ERROR</code> for legacy-style error trapping.<br><br>Inside a CATCH block, use <code>SQLCA.SQLCODE</code> to check the error code and <code>SQLERRMESSAGE</code> to get the error message string.`,
+    docs: [
+      { label: 'TRY/CATCH syntax', url: '#' },
+      { label: 'SQLCA reference', url: '#' },
+    ],
+    video: { title: 'Error Handling and Debugging in BDL', desc: 'Walks through TRY/CATCH blocks, WHENEVER ERROR, and how to read SQLCA error codes for effective debugging.' }
+  },
+  {
+    keywords: ['database', 'connect', 'sql', 'cursor', 'select'],
+    answer: `To connect to a database in BDL, use the <code>CONNECT TO</code> statement followed by your data source name.<br><br>Example: <code>CONNECT TO "mydb"</code><br><br>After connecting, use standard SQL statements (<code>SELECT</code>, <code>INSERT</code>, etc.) embedded directly in your BDL code. Use <code>DECLARE</code> and <code>OPEN</code> cursor statements for multi-row queries.`,
+    docs: [
+      { label: 'CONNECT TO statement', url: '#' },
+      { label: 'Cursor management', url: '#' },
+    ],
+    video: null
+  },
+  {
+    keywords: ['for loop', 'loop', 'while', 'foreach', 'iterate'],
+    answer: `BDL supports several loop types:<br><br>• <code>FOR i = 1 TO 10 ... END FOR</code> — fixed iteration<br>• <code>WHILE condition ... END WHILE</code> — condition-based<br>• <code>FOREACH cursor INTO var ... END FOREACH</code> — iterates over a SQL cursor result set<br><br>Use <code>EXIT FOR</code> or <code>CONTINUE FOR</code> to control loop flow.`,
+    docs: [
+      { label: 'FOR loop syntax', url: '#' },
+      { label: 'FOREACH with cursors', url: '#' },
+    ],
+    video: { title: 'Control Flow in  BDL', desc: 'Covers FOR, WHILE, and FOREACH loops with practical examples including database cursor iteration.' }
+  },
+  {
+    keywords: ['report', 'list report', 'output', 'print'],
+    answer: ` BDL has a built-in <code>REPORT</code> construct for generating formatted output. Define a report function with <code>REPORT reportName(param)</code> and call it using <code>START REPORT</code>, <code>OUTPUT TO REPORT</code>, and <code>FINISH REPORT</code>.<br><br>Reports can be rendered as PDF, HTML, or Excel using the  Report Engine.`,
+    docs: [
+      { label: 'REPORT statement reference', url: '#' },
+      { label: ' Report Engine overview', url: '#' },
+    ],
+    video: { title: 'Create your First List Report', desc: 'Step-by-step guide to building a list report in  BDL — defining the report function, formatting output, and rendering to PDF.' }
+  },
+];
+
+function ask(q) {
+  document.getElementById('query').value = q;
+  search();
+}
+
+function search() {
+  const q = document.getElementById('query').value.trim().toLowerCase();
+  if (!q) return;
+
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('empty-state').style.display = 'none';
+
+  const match = knowledge.find(k => k.keywords.some(kw => q.includes(kw)));
+
+  if (match) {
+    document.getElementById('ai-text').innerHTML = match.answer;
+
+    const docsRow = document.getElementById('docs-row');
+    docsRow.innerHTML = match.docs.map(d =>
+      `<a class="doc-link" href="${d.url}"><span class="doc-icon">📄</span>${d.label}</a>`
+    ).join('');
+
+    if (match.video) {
+      document.getElementById('video-title').textContent = match.video.title;
+      document.getElementById('video-desc').textContent = match.video.desc;
+      document.getElementById('video-card').style.display = 'flex';
+      document.getElementById('no-video').style.display = 'none';
+    } else {
+      document.getElementById('video-card').style.display = 'none';
+      document.getElementById('no-video').style.display = 'block';
+    }
+  } else {
+    document.getElementById('ai-text').innerHTML = `I don't have specific documentation for "<strong>${document.getElementById('query').value}</strong>" yet. Try rephrasing your question or browse the topics below.`;
+    document.getElementById('docs-row').innerHTML = '';
+    document.getElementById('video-card').style.display = 'none';
+    document.getElementById('no-video').style.display = 'block';
+    document.getElementById('no-video').textContent = 'No training video available for this topic yet. Your question has been noted — topics like this help us prioritise what to produce next.';
+  }
+}
+
+document.getElementById('query').addEventListener('keydown', e => {
+  if (e.key === 'Enter') search();
+});
+</script>
+
+</body>
+</html>
