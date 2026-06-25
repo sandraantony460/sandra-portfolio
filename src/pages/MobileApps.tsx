@@ -47,9 +47,9 @@ export default function MobileApps() {
           </li>
         </ul>
 
-        {/* Placeholder for analysis mockup */}
-        <div className="mt-5 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 h-48 flex items-center justify-center text-slate-400 text-sm">
-          [ Course outline / gap analysis mockup — adding in the morning ]
+        <div className="mt-5">
+          <p className="text-xs text-slate-400 mb-2">Course agenda showing all 12 units, learning objectives, and content classification — built in Excel during the analysis phase.</p>
+          <iframe src="/mockup-course-agenda.html" className="w-full rounded-xl border border-slate-200" style={{height: '420px'}} title="Course agenda spreadsheet" />
         </div>
       </section>
 
@@ -74,9 +74,9 @@ export default function MobileApps() {
           </li>
         </ul>
 
-        {/* Placeholder for storyboard mockup */}
-        <div className="mt-5 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 h-48 flex items-center justify-center text-slate-400 text-sm">
-          [ Storyboard / course design mockup — adding in the morning ]
+        <div className="mt-5">
+          <p className="text-xs text-slate-400 mb-2">Cert question mapping — each cert-critical unit was mapped directly to questions in the knowledge bank, ensuring full alignment between what is taught and what is assessed.</p>
+          <iframe src="/mockup-cert-questions.html" className="w-full rounded-xl border border-slate-200" style={{height: '320px'}} title="Cert question mapping" />
         </div>
       </section>
 
@@ -117,13 +117,9 @@ export default function MobileApps() {
         </div>
 
         {/* Placeholder for bug screenshots */}
-        <div className="space-y-3">
-          <div className="bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 h-48 flex items-center justify-center text-slate-400 text-sm">
-            [ Bug screenshot — not working sample — adding in the morning ]
-          </div>
-          <div className="bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 h-48 flex items-center justify-center text-slate-400 text-sm">
-            [ Fixed version after R&D resolved — adding in the morning ]
-          </div>
+        <div className="mt-2">
+          <p className="text-xs text-slate-400 mb-2">Runtime bug identified during testing — toolbar icons failed to render on the Android emulator. Documented and raised with R&D, who confirmed and patched it before the course launched.</p>
+          <iframe src="/mockup-bug.html" className="w-full rounded-xl border border-slate-200" style={{height: '320px'}} title="Bug before and after" />
         </div>
       </section>
 
@@ -147,10 +143,6 @@ export default function MobileApps() {
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Enterprise customers who would otherwise have had no learning path for the product are actively using the course today</span></li>
         </ul>
 
-        {/* Placeholder for final course screenshot */}
-        <div className="mt-5 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 h-48 flex items-center justify-center text-slate-400 text-sm">
-          [ Final course in LMS — adding in the morning ]
-        </div>
       </section>
 
     </CaseStudyLayout>

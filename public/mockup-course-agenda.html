@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Course Agenda</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Calibri', 'Segoe UI', sans-serif; background: #f8f8f8; padding: 16px; }
+  .wrapper { background: white; border: 1px solid #bdbdbd; border-radius: 4px; overflow: hidden; }
+  .topbar { background: #217346; padding: 6px 12px; display: flex; align-items: center; gap: 8px; }
+  .topbar span { color: white; font-size: 12px; font-weight: 600; }
+  .topbar small { color: rgba(255,255,255,0.7); font-size: 11px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  thead tr { background: #2e75b6; }
+  thead th { padding: 7px 10px; text-align: left; color: white; font-weight: 600; border: 1px solid #1f5a8a; }
+  tbody tr:nth-child(even) { background: #f9f9f9; }
+  tbody tr:nth-child(odd) { background: white; }
+  tbody td { padding: 7px 10px; border: 1px solid #e0e0e0; color: #333; vertical-align: top; line-height: 1.4; }
+  .badge { padding: 2px 6px; border-radius: 3px; font-size: 11px; white-space: nowrap; }
+  .cert { background: #fce4e4; color: #c62828; }
+  .support { background: #e3f2fd; color: #1565c0; }
+  .practical { background: #e8f5e9; color: #2e7d32; }
+  .tabs { padding: 0; background: #f5f5f5; border-top: 1px solid #e0e0e0; display: flex; }
+  .tab-active { font-size: 11px; color: #217346; font-weight: 600; border-top: 2px solid #217346; border-left: 1px solid #bdbdbd; border-right: 1px solid #bdbdbd; background: white; padding: 4px 12px; }
+  .tab { font-size: 11px; color: #666; border-right: 1px solid #bdbdbd; padding: 4px 12px; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="topbar"><span>Agenda Genero Mobile Apps.xlsx</span><small>— Agenda</small></div>
+  <table>
+    <thead>
+      <tr><th style="width:80px">NO</th><th style="width:200px">UNIT NAME</th><th>OBJECTIVE</th><th style="width:100px">TYPE</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Unit 1</td><td>Understand the Fundamentals of Genero Mobile</td><td>By the end of this unit, learners will be able to <strong>explain what Genero Mobile applications are</strong>, describe how they fit within the Four Js development ecosystem, and summarize the purpose of using a single code base for multi-platform mobile development.</td><td><span class="badge cert">Cert-Critical</span></td></tr>
+      <tr><td>Unit 2</td><td>Responsive Layout</td><td>Identify the three layout containers — VBox, HBox, and Grid. Apply the STRETCH=X property. Recognise how Genero classifies screens into Small, Medium, and Large. Use HIDDEN@screen-size and ORIENTATION@screen-size.</td><td><span class="badge support">Supporting</span></td></tr>
+      <tr><td>Unit 3</td><td>Recognise Key Mobile UI and UX Behaviours</td><td>By the end of this unit, learners will be able to <strong>identify mobile-specific UI behaviors</strong>, including platform-driven rendering, list-view transformations, orientation changes, theming constraints, and other design considerations unique to mobile environments.</td><td><span class="badge cert">Cert-Critical</span></td></tr>
+      <tr><td>Unit 4</td><td>Differentiate Between Genero Mobile Application Architectures</td><td>By the end of this unit, learners will be able to <strong>distinguish between standalone, partially connected, client-server, and development-mode applications</strong>, and identify appropriate use cases for each architecture within a mobile solution.</td><td><span class="badge cert">Cert-Critical</span></td></tr>
+      <tr><td>Unit 5</td><td>Describe How Genero Mobile Manages Local Data Using SQLite</td><td>By the end of this unit, learners will be able to <strong>explain how SQLite is used as the local database</strong>, describe how it is created or packaged within the application, and the constraints and implications of using SQLite on mobile devices.</td><td><span class="badge support">Supporting</span></td></tr>
+      <tr><td>Unit 7</td><td>Identify and Configure Essential Environment Variables</td><td>By the end of this unit, learners will be able to <strong>identify key environment variables required for running Genero Mobile applications</strong> and demonstrate how to define and manage these variables within Genero Studio for correct runtime behaviour.</td><td><span class="badge cert">Cert-Critical</span></td></tr>
+      <tr><td>Unit 8</td><td>Explain Mobile Security Considerations</td><td>By the end of this unit, learners will be able to <strong>explain how Android's sandbox model affects data storage</strong>, identify the risks of storing files outside the sandbox, and describe how to apply secure storage practices within mobile applications.</td><td><span class="badge support">Supporting</span></td></tr>
+      <tr><td>Unit 11</td><td>Apply Concepts by Building a Simple Genero Mobile Application</td><td>By the end of this unit, learners will be able to <strong>design, build, and test a basic Genero Mobile application</strong> that incorporates UI screens, SQLite storage, at least one device feature, and a simple interaction with a simulated or real backend service.</td><td><span class="badge practical">Practical</span></td></tr>
+      <tr><td>Unit 12</td><td>Genero Web Apps</td><td>Explain the constraints of Genero Mobile applications. Highlight that the main things achievable in mobile can also be done in Genero Web Apps. Understand when to recommend web over mobile for a given use case.</td><td><span class="badge support">Supporting</span></td></tr>
+    </tbody>
+  </table>
+  <div class="tabs">
+    <span class="tab-active">Agenda</span>
+    <span class="tab">Prerequisites</span>
+    <span class="tab">Supporting Materials</span>
+  </div>
+</div>
+</body>
+</html>
