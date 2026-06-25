@@ -4,7 +4,7 @@ export default function SampleVideo() {
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Sample Work</p>
+      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Portfolio</p>
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Work</h1>
       <p className="text-slate-500 text-sm mb-12">Instructional Video · Interactive Scenario · Live Presentation · Screen Recording</p>
 
