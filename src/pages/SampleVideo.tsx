@@ -4,9 +4,26 @@ export default function SampleVideo() {
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Case Study 4</p>
+      <p className="text-sm text-indigo-600 font-medium uppercase tracking-wide mb-2">Sample Work</p>
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Sample Work</h1>
-      <p className="text-slate-500 text-sm mb-12">Instructional Video · Live Presentation · Screen Recording</p>
+      <p className="text-slate-500 text-sm mb-12">Instructional Video · Interactive Scenario · Live Presentation · Screen Recording</p>
+
+      {/* Sample 0 — Storyline Interaction */}
+      <section className="mb-14">
+        <h2 className="text-xl font-semibold text-slate-800 mb-1">Interactive Scenario — Articulate Storyline 360</h2>
+        <p className="text-slate-500 text-sm italic mb-4">Onboarding a New Team Member · Branching Scenario</p>
+        <p className="text-slate-700 text-sm leading-relaxed mb-5">
+          A short branching scenario built in Storyline 360. The learner plays the role of a manager on a new joiner's first day and makes decisions that lead to different outcomes. Demonstrates scenario design, branching logic, and feedback states.
+        </p>
+        <div className="aspect-video rounded-xl overflow-hidden border border-slate-200 shadow">
+          <iframe
+            src="/onboarding/story.html"
+            className="w-full h-full"
+            title="Onboarding Branching Scenario — Storyline 360"
+            allowFullScreen
+          />
+        </div>
+      </section>
 
       {/* Sample 1 */}
       <section className="mb-14">
