@@ -75,7 +75,6 @@ export default function Home() {
             { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence, JIRA automation' },
             { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace, GitHub' },
             { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
-            { category: 'Development', tools: 'Python, SQL, HTML, React, Vite, Tailwind CSS' },
           ].map(({ category, tools }) => (
             <div key={category} className="flex gap-4 px-5 py-3">
               <span className="w-40 shrink-0 text-xs font-semibold text-slate-400 uppercase tracking-wide pt-0.5">{category}</span>
@@ -130,7 +129,6 @@ export default function Home() {
           {' · '}
           <a href="https://www.linkedin.com/in/sandra-a-b255707b/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">LinkedIn</a>
         </p>
-        <p className="text-xs text-slate-400">This portfolio is built in React, Vite, and Tailwind CSS and deployed via Cloudflare Pages.</p>
       </section>
 
     </main>
