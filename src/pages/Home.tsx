@@ -72,7 +72,7 @@ export default function Home() {
           {[
             { category: 'Video & Production', tools: 'Synthesia, Camtasia, Adobe Premiere Pro, Clipchamp, iSpring, Amazon Polly, Snagit' },
             { category: 'Authoring & LMS', tools: 'Articulate Storyline, Articulate Rise, TalentLMS, Moodle, MadCap Flare, Adobe FrameMaker (DITA-XML)' },
-            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence, JIRA automation' },
+            { category: 'AI & Automation', tools: 'Claude, Synthesia API, Amazon Polly, Genero Intelligence' },
             { category: 'Collaboration', tools: 'Confluence, SharePoint, MS Office, Google Workspace, GitHub' },
             { category: 'Project Management', tools: 'Jira, ClickUp, Trello' },
           ].map(({ category, tools }) => (
