@@ -82,7 +82,7 @@ export default function AIPrototype() {
           ))}
         </div>
         <ul className="space-y-2 text-slate-700 mb-8">
-          <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Prototype accepted by the AI team and currently in integration planning</span></li>
+          <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Phase 1 launched on 6 July 2026 and announced as a new feature to the team</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Phase 2 proposed: use real search data to identify high-demand topics with no existing video</span></li>
           <li className="flex gap-3"><span className="text-indigo-400 mt-1 shrink-0">→</span><span>Testing a Synthesia API + Claude pipeline to cut time-to-publish on new content</span></li>
         </ul>
