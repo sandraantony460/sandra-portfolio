@@ -8,8 +8,8 @@ export default function AIPrototype() {
       tags="Prototype Design · AI Integration · Content Strategy"
     >
 
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 mb-6 text-sm text-amber-800">
-        This project is in active development and not yet public — the doc assistant is currently available to company partners only. Happy to walk through the design and data strategy in detail.
+      <div className="bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-6 text-sm text-green-800">
+        Phase 1 of this project has launched and was announced as a new feature to the team. The doc assistant is currently available to company partners only.
       </div>
 
       <div className="bg-indigo-50 border border-indigo-100 rounded-xl px-6 py-5 mb-10 flex flex-col sm:flex-row sm:items-center gap-4">
@@ -69,7 +69,7 @@ export default function AIPrototype() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-slate-800 mb-3">Results (in progress)</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-3">Results</h2>
         <div className="grid gap-4 sm:grid-cols-2 mb-5">
           {[
             { stat: '25', label: 'Existing BDL videos reused. Zero new production cost at launch.' },
